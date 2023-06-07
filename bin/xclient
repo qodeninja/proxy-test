@@ -20,6 +20,8 @@ x=$(tput sgr0)
 #===============================================================================
 
   usage(){:}
+  build(){:}
+  rundev(){:}
 
   dispatch(){
     local call="$1" arg= path= cmd_str= ret;

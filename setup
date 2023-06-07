@@ -11,7 +11,7 @@ stderr(){ printf "${@}${x}\n" 1>&2; }
 XCLIENT_BIN="$PWD/bin";
 
 if [[ ! "$PATH" =~ "$XCLIENT_BIN" ]]; then
-  stderr "${red}Xclient bin directory is missing. Adding...${x}";
+  stderr "${red}XClient bin directory is missing. Adding...${x}";
   export PATH="$XCLIENT_BIN":$PATH
 else
   stderr "${green}XClient bin already on path.${x}";
