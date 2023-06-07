@@ -33,8 +33,8 @@ export default defineConfig({
         { find: '@dirx',   replacement: fp(new URL(`${basePath}/directives`, import.meta.url)) },  
         { find: '@stores', replacement: fp(new URL(`${basePath}/stores`, import.meta.url)) }, 
         { find: '@routes', replacement: fp(new URL(`${basePath}/routes`, import.meta.url)) },  
-        { find: '@lib',    replacement: fp(new URL(`${basePath}/lib`, import.meta.url)) },         
-        { find: '@utils',  replacement: fp(new URL(`${basePath}/utils`, import.meta.url)) },  
+        { find: '@libs',    replacement: fp(new URL(`${basePath}/libs`, import.meta.url)) },         
+        { find: '@utils',  replacement: fp(new URL(`${basePath}/libs/utils`, import.meta.url)) },  
         { find: '@mixins', replacement: fp(new URL(`${basePath}//mixins`, import.meta.url)) }, 
         { find: '@x',      replacement: fp(new URL(`${basePath}/components/x`, import.meta.url)) }, 
       ]

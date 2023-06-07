@@ -1,1 +1,16 @@
-{}
+{
+  "env"  : {
+    "quiet_mode" : false,
+    "debug_mode" : true
+  },
+  "mods" : {
+    "dark_mode" : {
+      "enabled" : true
+    },
+    "sandbox" : {
+      "xray_enabled" : true,
+      "nav_enabled" : false
+    }
+  },
+  "presets" : {}
+}

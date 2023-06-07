@@ -1,0 +1,28 @@
+
+:root{
+  --theme-mode:'🌞';
+  --base-bg:#eee;
+  --base-color:black;
+  --text-field-bg:#fff;
+  --text-field-color:#000;
+  --container-line-color:#ccc;
+  --container-bg:#fff;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --theme-mode:'🌜';
+    --base-bg:#000;
+    --base-color:#ccc;
+    --text-field-bg:#ccc;
+    --text-field-color:#fff;
+    --container-bg:black;
+    --container-line-color:#111;
+  }
+}
+
+html,body{
+  color:var(--base-color);
+  background:var(--base-bg);
+}
