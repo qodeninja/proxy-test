@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+#===============================================================================
+
+red=$(tput setaf 202)
+green=$(tput setaf 2)
+x=$(tput sgr0)
+
+#----------------------------------------------------
+# UTILS
+#----------------------------------------------------
+
+  stderr(){ printf "${@}${x}\n" 1>&2; }
+  fatal(){ stderr "${red}Error:${1}${x}"; exit 1; }
+  in_array(){
+    local e;
+    for e in "${@:2}"; do [[ "$e" == "$1" ]] && return 0; done
+    return 1;
+  }
+
+#===============================================================================
+
+  usage(){:}
+
+  dispatch(){
+    local call="$1" arg= path= cmd_str= ret;
+    stderr "${green}XCLIENT is bin script!${x}"
+  }
+
+  main(){
+    local ret;
+    dispatch "$@";ret=$?
+    [ -n "$err" ] && fatal "$err" || stderr "$out";
+    unset out err;
+    return $ret
+  }
+
+#-------------------------------------------------------------------------------
+
+  main "$@";

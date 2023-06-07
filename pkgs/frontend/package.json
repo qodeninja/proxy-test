@@ -1,0 +1,74 @@
+{
+    "name": "x-client",
+    "author" : "qodeninja",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "main": "backend/src/index.js",
+    "scripts": {
+        "dev": "vite --host --config conf/vite.config.js",
+        "build": "vite build --config conf/vite.config.js",
+        "preview": "vite preview --config conf/vite.config.js",
+        "build:css": "postcss src/www/index.css -o dist/style.css --map",
+        "postcss:watch": "postcss rc/www/index.css --dir dist --watch",
+        "obfuscate": "node postcss-obfuscate"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "cssnano": "^6.0.1",
+        "global": "^4.4.0",
+        "mitt": "^3.0.0",
+        "pinia": "^2.0.35",
+        "postcss-preset-env": "^8.3.2",
+        "vue": "^3.2.47",
+        "vue-router": "^4.1.6"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.1.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.39.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-vue": "^9.11.0",
+        "postcss": "^8.4.23",
+        "postcss-import": "^15.1.0",
+        "postcss-mixins": "^9.0.4",
+        "postcss-obfuscator": "^1.4.5",
+        "prettier": "^2.8.8",
+        "vite": "^4.3.3"
+    },
+    "prettier": {
+        "semi": true,
+        "tabWidth": 2,
+        "useTabs": false,
+        "printWidth": 120,
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "bracketSpacing": true,
+        "arrowParens": "avoid"
+    },
+    "eslintConfig": {
+        "extends": [
+            "plugin:vue/vue3-essential",
+            "prettier"
+        ],
+        "rules": {}
+    },
+    "postcss": {
+        "map": false,
+        "plugins": {
+            "postcss-import": {
+                "root": "./src/www",
+                "resolve": "postcss-import-resolver"
+            },
+            "postcss-mixins": {},
+            "autoprefixer": {},
+            "postcss-preset-env": {
+                "stage": 3
+            },
+            "cssnano": {
+                "preset": "default"
+            }
+        }
+    }
+}

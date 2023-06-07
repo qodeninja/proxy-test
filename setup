@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+
+
+red=$(tput setaf 202)
+green=$(tput setaf 2)
+x=$(tput sgr0)
+
+stderr(){ printf "${@}${x}\n" 1>&2; }
+
+XCLIENT_BIN="$PWD/bin";
+
+if [[ ! "$PATH" =~ "$XCLIENT_BIN" ]]; then
+  stderr "${red}Xclient bin directory is missing. Adding...${x}";
+  export PATH="$XCLIENT_BIN":$PATH
+else
+  stderr "${green}XClient bin already on path.${x}";
+fi
+
+#cleanup
+unset XCLIENT_BIN
+unset red
+unset green
+unset x

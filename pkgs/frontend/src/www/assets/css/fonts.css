@@ -1,0 +1,87 @@
+/* these are the currently published icons more will be added as needed */
+
+@font-face {
+  font-family: 'material';
+  src:  url('@fonts/material.v1.eot?1nflxv');
+  src:  url('@fonts/material.v1.eot?1nflxv#iefix') format('embedded-opentype'),
+    url('@fonts/material.v1.woff?1nflxv') format('woff'),
+    url('@fonts/material.v1.woff2?1nflxv') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ico-"], [class*=" ico-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'material' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-expand:before {
+  content: "\e912";
+}
+.ico-warning:before {
+  content: "\e900";
+}
+.ico-repeat:before {
+  content: "\e901";
+}
+.ico-email:before {
+  content: "\e902";
+}
+.ico-msg:before {
+  content: "\e903";
+}
+.ico-more:before {
+  content: "\e904";
+}
+.ico-clear:before {
+  content: "\e905";
+}
+.ico-edit:before {
+  content: "\e906";
+}
+.ico-send:before {
+  content: "\e907";
+}
+.ico-brush:before {
+  content: "\e908";
+}
+.ico-color:before {
+  content: "\e909";
+}
+.ico-zoomout:before {
+  content: "\e913";
+}
+.ico-check:before {
+  content: "\e90a";
+}
+.ico-menu:before {
+  content: "\e90b";
+}
+.ico-refresh:before {
+  content: "\e90c";
+}
+.ico-user:before {
+  content: "\e90d";
+}
+.ico-profile:before {
+  content: "\e90e";
+}
+.ico-profile2:before {
+  content: "\e90f";
+}
+.ico-bug:before {
+  content: "\e910";
+}
+.ico-lab:before {
+  content: "\e911";
+}
