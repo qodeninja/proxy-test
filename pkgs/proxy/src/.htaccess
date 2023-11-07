@@ -1,0 +1,29 @@
+Options +FollowSymLinks
+DirectoryIndex index.html index.php
+
+
+
+# Redirect requests to www directory
+RewriteEngine on
+RewriteBase    "/proxy/"
+
+#security best practice to force domain
+RewriteCond %{HTTP_HOST} !^dev\.
+RewriteRule ^(.*)$ https://dev.%{HTTP_HOST}/$1 [R=302,L]
+
+# Rewrite all requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)(?:/([^/]+))?/?$ index.php?service=$1&call=$2 [L,QSA]
+#RewriteRule ^([^/]+)/([^/]+)/?$ index.php?service=$1&call=$2 [L,QSA]
+
+RedirectMatch 404 /\.git
+
+<FilesMatch "^\.htaccess$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^(lib|api)/.*$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
